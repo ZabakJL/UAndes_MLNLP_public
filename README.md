@@ -1,2 +1,2 @@
 # UAndes_MLNLP_public
-Entregables del curso MLNLP de MIAD
+En este repositorio se exponen los entregables del curso MLNLP de MIAD organizados por semanas. 
