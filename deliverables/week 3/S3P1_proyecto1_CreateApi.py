@@ -608,11 +608,11 @@ def usedCarPricesPredict(Year, Mileage, State, Make, Model):
     return p1
 
 # Predicción de probabilidad de que un link sea phishing
-usedCarPricesPredict(2014, 31909, 'MD', 'Nissan', 'MuranoAWD')
+#usedCarPricesPredict(2014, 31909, 'MD', 'Nissan', 'MuranoAWD')
 
 
 # Predicción de probabilidad de que un link sea phishing
-usedCarPricesPredict(2017, 5362, 'FL', 'Jeep', 'Wrangle')
+#usedCarPricesPredict(2017, 5362, 'FL', 'Jeep', 'Wrangle')
 
 # Definición aplicación Flask
 app = Flask(__name__)
@@ -679,8 +679,7 @@ class UsedCarPricePredictionAPI(Resource):
         args = parser.parse_args()        
         prediction = usedCarPricesPredict(args['Year'], args['Mileage'], args['State'], args['Make'], args['Model'])
         return {"result": prediction[0]}, 200
-        #return jsonify({'predicted_price': prediction[0]})
-        #return jsonify({'predicted_price': args})
+
 
 # Ejecución de la aplicación que disponibiliza el modelo de manera local en el puerto 5000
 app.run(debug=True, use_reloader=False, host='0.0.0.0', port=88)
